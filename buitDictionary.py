@@ -29,6 +29,8 @@ output = dictionary(word)
 if type(output) == list:
     for i in output:
         print(i)
+else:
+    print(output)
    
 
 
