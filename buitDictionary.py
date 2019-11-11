@@ -6,7 +6,7 @@ def dictionary(word):
     word = word.lower()
     if word in data:
         print(f'{word} :' , data[word])
-    elif word not in data:
+    elif len(get_close_matches(word, data.keys())) > 0:
         final = get_close_matches(word,data)[0]
         close_enough = input(f'do you mean "{final}" ? : ')
         if close_enough == "yes":
